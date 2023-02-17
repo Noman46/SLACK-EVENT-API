@@ -1,0 +1,17 @@
+{  
+  "name": "sub_slack_events_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "slack/cahnnelMessage.js",
+  "scripts": {
+    "start": "node slack/cahnnelMessage.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/bolt": "^3.12.2",
+    "axios": "^1.2.0"
+  }
+}
