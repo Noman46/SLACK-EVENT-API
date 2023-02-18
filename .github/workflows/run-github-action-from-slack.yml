@@ -2,23 +2,15 @@ name: run-github-action-from-slack
 
 on:
   repository_dispatch:
-    types: on-zephr-status-in-slack-run-this
+    types: on-zmessage-in-slack-channel
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   
 jobs:
-  subscube-dn-prod:
+  github-actions-trigger-from-slack-message:
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs docker hello-world
-      - name: Hello from Docker
-        run: docker run hello-world
+        run: echo Hello, I have run because I got the command from slack!
